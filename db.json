@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "name": "Prince Gadhiya",
+      "email": "prince@gmail.com",
+      "phone": "1234567890",
+      "address": "Jamnagar",
+      "username": "prince",
+      "password": "p",
+      "conformpassword": "p",
+      "id": 1
+    },
+    {
+      "name": "Mayur Gadhiya",
+      "email": "mayur@gmail.com",
+      "phone": "0987654321",
+      "address": "Jamnagar",
+      "username": "mg",
+      "password": "m",
+      "conformpassword": "m",
+      "id": 2
+    },
+    {
+      "name": "Harshil",
+      "email": "harry@gmail.com",
+      "phone": "1234567890",
+      "address": "Jamnagar",
+      "username": "harry",
+      "password": "h",
+      "conformpassword": "h",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "name": "T-shirt",
+      "description": "Something",
+      "category": "Man",
+      "price": "400",
+      "stock": "Y",
+      "id": 1
+    },
+    {
+      "name": "Shirt",
+      "description": "Nothing",
+      "category": "Man",
+      "price": "700",
+      "stock": "Y",
+      "id": 2
+    },
+    {
+      "name": "Pant",
+      "description": "Something",
+      "category": "Man",
+      "price": "1200",
+      "stock": "Y",
+      "id": 3
+    },
+    {
+      "name": "T-shirt",
+      "description": "Something",
+      "category": "Woman",
+      "price": "500",
+      "stock": "Y",
+      "id": 4
+    },
+    {
+      "name": "Shirt",
+      "description": "Nothing",
+      "category": "Woman",
+      "price": "700",
+      "stock": "Y",
+      "id": 5
+    },
+    {
+      "name": "Pant",
+      "description": "Something",
+      "category": "Woman",
+      "price": "1200",
+      "stock": "Y",
+      "id": 6
+    }
+  ]
+}
