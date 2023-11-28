@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import imgLogin from '../images/Login.png'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 const Login = () => {
-
+  
   const [data, setData] = useState()
   const [error, setError] = useState({
     status: false,
@@ -12,12 +12,14 @@ const Login = () => {
     msg: ''
   })
   const navigate = useNavigate();
+
+    sessionStorage.clear();
   
   useEffect(()=> {
     axios.get('http://localhost:8000/users')
     .then((res) => setData(res.data))
     .catch(err => console.log(err))
-  }, [])
+  })
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -31,7 +33,8 @@ const handleSubmit = (e) => {
   if (actualData.username && actualData.password) {
     data.map((d) => {
       if (actualData.username === d.username && actualData.password === d.password) {
-        navigate('/home', {state: d.id});
+        sessionStorage.setItem('id',d.id)
+        navigate('/home');
       }
       else{
         setError({ status: true, msg: "Wrong username or password", type: "Error" })

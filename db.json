@@ -65,19 +65,11 @@
       "id": 4
     },
     {
-      "name": "Shirt",
-      "description": "Nothing",
-      "category": "Woman",
-      "price": "700",
-      "stock": "Y",
-      "id": 5
-    },
-    {
-      "name": "Pant",
-      "description": "Something",
-      "category": "Woman",
-      "price": "1200",
-      "stock": "Y",
+      "name": "p",
+      "description": "p",
+      "category": "p",
+      "price": "p",
+      "stock": "inStock",
       "id": 6
     }
   ]

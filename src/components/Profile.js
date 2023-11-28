@@ -1,10 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
-  const location = useLocation();
-  const id = location.state;
+  const id = sessionStorage.getItem('id');
   const [data, setData] = useState([]);
 
   useEffect(() => {

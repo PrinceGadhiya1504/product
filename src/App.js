@@ -7,6 +7,7 @@ import Profile from './components/Profile'
 import AddProduct from "./components/AddProduct";
 import ReadProduct from "./components/ReadProduct";
 import UpdateProduct from "./components/UpdateProduct";
+import Add from "./components/Add";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/addProduct' element={<AddProduct />}/>
       <Route path='/readProduct' element={<ReadProduct />}/>
       <Route path='/updateProduct' element={<UpdateProduct />}/>
+      <Route path='/add' element={<Add />}/>
     </Routes>
    </BrowserRouter>
   );

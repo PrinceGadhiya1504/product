@@ -1,13 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-  const location = useLocation();
-  const id = location.state;
 
   const [data, setData] = useState([])
-    
+  const id = sessionStorage.getItem('id');
     useEffect(() => {
         axios.get('http://localhost:8000/products')
         .then(res => setData(res.data))
@@ -30,7 +28,7 @@ const Home = () => {
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
           <div className="container-fluid">
             {/* <a className="navbar-brand" href="/">Navbar</a> */}
-            <Link to='/profile'state={id} className='navbar-brand'>Profile</Link>
+            <Link to='/profile'className='navbar-brand'>Profile</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
@@ -56,12 +54,14 @@ const Home = () => {
         <div className='w-75 rounded bg-white border shadow p-4'>
             <div className='d-flex justify-content-end'>
                 <Link to="/addProduct" className='btn btn-success'>Add +</Link>
+                <Link to="/add" className='btn btn-secondary ms-4'>All Fileds +</Link>
                 {/* <Link to="/login" className='btn btn-warning ms-3'>Login</Link> */}
             </div>
             <table className='table table-striped'>
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>No</th>
+                        {/* <th>Id</th> */}
                         <th>Name</th>
                         <th>Description</th>
                         <th>Category</th>
@@ -73,7 +73,8 @@ const Home = () => {
                     {
                         data.map((d, i) => (
                             <tr key={i}>
-                                <td>{d.id}</td>
+                                <td>{i+1}</td>
+                                {/* <td>{d.id}</td> */}
                                 <td>{d.name}</td>
                                 <td>{d.description}</td>
                                 <td>{d.category}</td>
